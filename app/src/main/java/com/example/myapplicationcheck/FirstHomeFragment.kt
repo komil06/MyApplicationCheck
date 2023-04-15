@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
@@ -29,6 +30,7 @@ class FirstHomeFragment : Fragment() {
         val binding = FragmentFirstHomeBinding.inflate(inflater,container,false)
         binding.booked.setOnClickListener{
             findNavController().navigate(R.id.action_firstHomeFragment_to_bookedFragment)
+
         }
         binding.notif.setOnClickListener{
             findNavController().navigate(R.id.action_firstHomeFragment_to_notifFragment)
