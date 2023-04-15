@@ -10,7 +10,7 @@
     <androidx.cardview.widget.CardView
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="370dp"
         app:cardCornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,11 +30,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="250dp"
-            android:textSize="25dp"
+            android:layout_marginTop="200dp"
+            android:text="TextView"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:text="TextView" />
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/location"
             android:layout_width="wrap_content"
@@ -42,7 +43,7 @@
             android:textSize="20dp"
             android:textColor="@color/white"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="250dp"
             android:text="TextView" />
         <TextView
             android:id="@+id/price"
@@ -51,14 +52,14 @@
             android:textSize="25dp"
             android:textColor="@color/white"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="340dp"
+            android:layout_marginTop="300dp"
             android:text="TextView" />
 
         <ImageView
             android:id="@+id/mark"
             android:layout_width="40dp"
             android:layout_height="100dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="270dp"
             android:layout_marginLeft="300dp"
             app:srcCompat="@drawable/baseline_book_online_24" />
 

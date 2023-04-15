@@ -4,56 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThirdSignFragment">
+    tools:context=".FirstProfileFragment">
+
 
     <ImageView
-        android:id="@+id/back2"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/back_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-
-    <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Fill Your Profile"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="20dp"
+        android:text="Profile"
+        android:textSize="30dp"
         android:textColor="@color/black"
-        android:textSize="20dp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/morenotif"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/morenotif"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_more"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
-        app:layout_constraintStart_toEndOf="@+id/back2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/profileLogo"
-        android:layout_width="152dp"
-        android:layout_height="147dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/baseline_person_24"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
         android:id="@+id/profileName"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:hint="Full Name"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileLogo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/profileEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileName" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profileName2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:startIconDrawable="@drawable/baseline_person_24"
+        android:hint="Edit Profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileEmail"
         tools:ignore="MissingConstraints,NotSibling">
 
 
@@ -67,16 +100,16 @@
             tools:layout_editor_absoluteY="303dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
+        android:id="@+id/payment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Nickname"
+        android:layout_marginTop="65dp"
+        app:startIconDrawable="@drawable/baseline_payment_24"
+        android:hint="Payment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileName"
+        app:layout_constraintTop_toBottomOf="@+id/profileEmail"
         tools:ignore="MissingConstraints,NotSibling">
 
 
@@ -90,17 +123,16 @@
             tools:layout_editor_absoluteY="303dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout4"
+        android:id="@+id/profileNotif"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:hint="Date of Birth"
-        app:startIconDrawable="@drawable/ic_calendar"
+        android:layout_marginTop="120dp"
+        app:startIconDrawable="@drawable/baseline_notifications_24"
+        android:hint="Notifications"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileLogo"
+        app:layout_constraintTop_toBottomOf="@+id/profileEmail"
         tools:ignore="MissingConstraints,NotSibling">
 
 
@@ -114,16 +146,17 @@
             tools:layout_editor_absoluteY="303dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/profileEmail"
+        android:id="@+id/profilesecurity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:hint="Email"
-        app:startIconDrawable="@drawable/ic_email"
+        android:layout_marginTop="175dp"
+        app:startIconDrawable="@drawable/baseline_security_24"
+        android:hint="Security"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileLogo"
+        app:layout_constraintTop_toBottomOf="@+id/profileEmail"
         tools:ignore="MissingConstraints,NotSibling">
 
 
@@ -137,16 +170,16 @@
             tools:layout_editor_absoluteY="303dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout6"
+        android:id="@+id/profilehelp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
-        android:hint="Phone Number"
+        android:layout_marginTop="230dp"
+        app:startIconDrawable="@drawable/baseline_error_outline_24"
+        android:hint="Help"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileLogo"
+        app:layout_constraintTop_toBottomOf="@+id/profileEmail"
         tools:ignore="MissingConstraints,NotSibling">
 
 
@@ -160,16 +193,18 @@
             tools:layout_editor_absoluteY="303dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout7"
+        android:id="@+id/profilelogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="360dp"
-        android:hint="Gender"
+        android:layout_marginTop="285dp"
+        app:startIconTint="#DA031C"
+        app:startIconDrawable="@drawable/baseline_error_outline_24"
+        android:hint="Logout"
+        android:textColorHint="#DA031C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileLogo"
+        app:layout_constraintTop_toBottomOf="@+id/profileEmail"
         tools:ignore="MissingConstraints,NotSibling">
 
 
@@ -183,20 +218,12 @@
             tools:layout_editor_absoluteY="303dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/register_button"
-        android:layout_width="380dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#47B34B"
-        android:text="Continue"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        app:cornerRadius="25dp"
-        android:layout_marginTop="10dp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
-
-
+        app:menu="@menu/bottom_menu"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

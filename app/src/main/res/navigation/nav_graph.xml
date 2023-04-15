@@ -120,6 +120,31 @@
         android:id="@+id/firstHomeFragment"
         android:name="com.example.myapplicationcheck.FirstHomeFragment"
         android:label="fragment_first_home"
-        tools:layout="@layout/fragment_first_home" />
+        tools:layout="@layout/fragment_first_home" >
+        <action
+            android:id="@+id/action_firstHomeFragment_to_bookedFragment"
+            app:destination="@id/bookedFragment" />
+        <action
+            android:id="@+id/action_firstHomeFragment_to_notifFragment"
+            app:destination="@id/notifFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookedFragment"
+        android:name="com.example.myapplicationcheck.BookedFragment"
+        android:label="fragment_booked"
+        tools:layout="@layout/fragment_booked" >
+        <action
+            android:id="@+id/action_bookedFragment_to_firstHomeFragment"
+            app:destination="@id/firstHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notifFragment"
+        android:name="com.example.myapplicationcheck.NotifFragment"
+        android:label="fragment_notif"
+        tools:layout="@layout/fragment_notif" >
+        <action
+            android:id="@+id/action_notifFragment_to_firstHomeFragment"
+            app:destination="@id/firstHomeFragment" />
+    </fragment>
 
 </navigation>

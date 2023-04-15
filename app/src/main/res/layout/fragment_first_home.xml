@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/notif"
         android:layout_width="54dp"
         android:layout_height="29dp"
         android:layout_marginTop="24dp"
@@ -55,7 +55,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/booked"
         android:layout_width="54dp"
         android:layout_height="29dp"
         android:layout_marginTop="24dp"
@@ -70,13 +70,14 @@
         android:id="@+id/hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="65dp"
         android:text="Hello, Daniel 👋 "
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -86,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:background="#E4E1E1"
         android:drawableStart="@drawable/search"
@@ -96,53 +97,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hello" />
 
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="474dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
 
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:id="@+id/rv1"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="1dp"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/editText" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-<!--            <TextView-->
-<!--                android:id="@+id/text"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="8dp"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:text="Recently Booked"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="15sp"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/rv1"-->
-<!--                tools:ignore="MissingConstraints" />-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv1"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="1dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
 
-<!--            <TextView-->
-<!--                android:id="@+id/text2"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:text="See All"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="15sp"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.963"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/text"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/rv1"-->
-<!--                tools:ignore="MissingConstraints" />-->
 
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:id="@+id/rv2"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="200dp"-->
-<!--                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/text" />-->
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+        </LinearLayout>
 
+
+
+</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
