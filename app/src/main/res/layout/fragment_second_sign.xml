@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/back1"
         android:layout_width="40sp"
         android:layout_height="40sp"
         android:layout_marginTop="16dp"
@@ -97,6 +97,7 @@
         android:layout_marginTop="45dp"
         android:backgroundTint="#47B34B"
         android:text="Sign up"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         app:cornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -53,23 +53,26 @@
         </TextView>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/next3"
             android:layout_width="330dp"
             android:layout_height="60dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="40dp"
-            android:backgroundTint="#21C128"
             android:text="Next"
+            android:textColor="@color/white"
             android:textAllCaps="false"
             app:cornerRadius="20dp">
         </com.google.android.material.button.MaterialButton>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/skip3"
             android:layout_width="330dp"
             android:layout_height="60dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="#ECF6ED"
             android:text="Skip"
+
             android:textAllCaps="false"
             android:textColor="#21C128"
             app:cornerRadius="20dp">

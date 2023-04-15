@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_secondFragment2_to_thirdFragment"
             app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/action_secondFragment2_to_firstSignFragment"
+            app:destination="@id/firstSignFragment" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
@@ -40,6 +43,9 @@
         <action
             android:id="@+id/action_thirdFragment_to_fourthFragment"
             app:destination="@id/fourthFragment" />
+        <action
+            android:id="@+id/action_thirdFragment_to_firstSignFragment"
+            app:destination="@id/firstSignFragment" />
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"
@@ -49,6 +55,7 @@
         <action
             android:id="@+id/action_fourthFragment_to_firstSignFragment"
             app:destination="@id/firstSignFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/firstSignFragment"
@@ -58,6 +65,9 @@
         <action
             android:id="@+id/action_firstSignFragment_to_secondSignFragment"
             app:destination="@id/secondSignFragment" />
+        <action
+            android:id="@+id/action_firstSignFragment_to_fourthSignFragment"
+            app:destination="@id/fourthSignFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondSignFragment"
@@ -67,6 +77,14 @@
         <action
             android:id="@+id/action_secondSignFragment_to_thirdSignFragment"
             app:destination="@id/thirdSignFragment" />
+        <action
+            android:id="@+id/action_secondSignFragment_to_fourthSignFragment"
+            app:destination="@id/fourthSignFragment" />
+        <action
+            android:id="@+id/action_secondSignFragment_to_firstSignFragment"
+            app:destination="@id/firstSignFragment" />
+
+
     </fragment>
     <fragment
         android:id="@+id/thirdSignFragment"
@@ -76,10 +94,32 @@
         <action
             android:id="@+id/action_thirdSignFragment_to_fourthSignFragment"
             app:destination="@id/fourthSignFragment" />
+        <action
+            android:id="@+id/action_thirdSignFragment_to_secondSignFragment"
+            app:destination="@id/secondSignFragment" />
+
+
     </fragment>
     <fragment
         android:id="@+id/fourthSignFragment"
         android:name="com.example.myapplicationcheck.FourthSignFragment"
         android:label="fragment_fourth_sign"
-        tools:layout="@layout/fragment_fourth_sign" />
+        tools:layout="@layout/fragment_fourth_sign" >
+
+        <action
+            android:id="@+id/action_fourthSignFragment_to_firstSignFragment"
+            app:destination="@id/firstSignFragment" />
+        <action
+            android:id="@+id/action_fourthSignFragment_to_thirdSignFragment"
+            app:destination="@id/thirdSignFragment" />
+        <action
+            android:id="@+id/action_fourthSignFragment_to_firstHomeFragment"
+            app:destination="@id/firstHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstHomeFragment"
+        android:name="com.example.myapplicationcheck.FirstHomeFragment"
+        android:label="fragment_first_home"
+        tools:layout="@layout/fragment_first_home" />
+
 </navigation>

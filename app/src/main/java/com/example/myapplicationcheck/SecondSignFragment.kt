@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.myapplicationcheck.databinding.FragmentFirstSignBinding
+import com.example.myapplicationcheck.databinding.FragmentSecondSignBinding
 
 
 class SecondSignFragment : Fragment() {
@@ -17,11 +19,17 @@ class SecondSignFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Handler(Looper.myLooper()!!).postDelayed({
+        val binding = FragmentSecondSignBinding.inflate(inflater,container,false)
+        binding.registerButton.setOnClickListener {
             findNavController().navigate(R.id.action_secondSignFragment_to_thirdSignFragment)
-
-        }, 2000)
-        return inflater.inflate(R.layout.fragment_second_sign, container, false)
+        }
+        binding.login.setOnClickListener {
+            findNavController().navigate(R.id.action_secondSignFragment_to_fourthSignFragment)
+        }
+        binding.back1.setOnClickListener{
+            findNavController().navigate(R.id.action_secondSignFragment_to_firstSignFragment)
+        }
+        return binding.root
     }
 
 

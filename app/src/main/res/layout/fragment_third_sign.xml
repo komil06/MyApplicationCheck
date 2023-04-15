@@ -7,7 +7,7 @@
     tools:context=".ThirdSignFragment">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/back2"
         android:layout_width="40sp"
         android:layout_height="40sp"
         android:layout_marginTop="16dp"
@@ -23,14 +23,14 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Fill Your Profile"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toEndOf="@+id/back2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -189,7 +189,8 @@
         android:layout_width="380dp"
         android:layout_height="60dp"
         android:backgroundTint="#47B34B"
-        android:text="Sign up"
+        android:text="Continue"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         app:cornerRadius="25dp"
         android:layout_marginTop="10dp"
