@@ -127,6 +127,9 @@
         <action
             android:id="@+id/action_firstHomeFragment_to_notifFragment"
             app:destination="@id/notifFragment" />
+        <action
+            android:id="@+id/action_firstHomeFragment_to_firstProfileFragment"
+            app:destination="@id/firstProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/bookedFragment"
@@ -145,6 +148,15 @@
         <action
             android:id="@+id/action_notifFragment_to_firstHomeFragment"
             app:destination="@id/firstHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstProfileFragment"
+        android:name="com.example.myapplicationcheck.FirstProfileFragment"
+        android:label="fragment_first_profile"
+        tools:layout="@layout/fragment_first_profile" >
+        <action
+            android:id="@+id/action_firstProfileFragment_to_firstSignFragment"
+            app:destination="@id/firstSignFragment" />
     </fragment>
 
 </navigation>

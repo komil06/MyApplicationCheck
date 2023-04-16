@@ -35,6 +35,10 @@ class FirstHomeFragment : Fragment() {
         binding.notif.setOnClickListener{
             findNavController().navigate(R.id.action_firstHomeFragment_to_notifFragment)
         }
+        binding.recentlybooked.setOnClickListener {
+            findNavController().navigate(R.id.action_firstHomeFragment_to_bookedFragment)
+        }
+
 
         list.add(BigItem(R.drawable.itemback1,false,"Emeralda De Hotel","Paris, France","$29/per night"))
         list.add(BigItem(R.drawable.itemback2,false,"President Hotel","Paris, France",  "$35/per nigth"))
@@ -54,10 +58,10 @@ class FirstHomeFragment : Fragment() {
         list2.add(SmallItem(R.drawable.itemback4,false,"Palazzo Versace","Rome, Italy  ",  "$36/per nigth"))
         list2.add(SmallItem(R.drawable.itemback5,false,"Bulgary Resort","Istanbul, Turkiye",  "$27/per nigth"))
         list2.add(SmallItem(R.drawable.itemback6,false,"President Hotel","Paris, France",  "$35/per nigth"))
-//        val adapter2 = SmallItemAdapter(list2)
-//        val layoutManager2 = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-//        binding.rv2.adapter = adapter2
-//        binding.rv2.layoutManager = layoutManager2
+        val adapter2 = SmallItemAdapter(list2)
+        val layoutManager2 = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        binding.rv2.adapter = adapter2
+        binding.rv2.layoutManager = layoutManager2
 
         return binding.root
 
