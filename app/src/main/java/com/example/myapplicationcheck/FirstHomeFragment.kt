@@ -40,6 +40,7 @@ class FirstHomeFragment : Fragment() {
         }
 
 
+
         list.add(BigItem(R.drawable.itemback1,false,"Emeralda De Hotel","Paris, France","$29/per night"))
         list.add(BigItem(R.drawable.itemback2,false,"President Hotel","Paris, France",  "$35/per nigth"))
         list.add(BigItem(R.drawable.itemback3,false,"Palms Casino","Amsterdam, Netherlands",  "$29/per nigth"))
