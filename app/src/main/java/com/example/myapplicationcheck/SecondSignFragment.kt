@@ -29,6 +29,8 @@ class SecondSignFragment : Fragment() {
         binding.back1.setOnClickListener{
             findNavController().navigate(R.id.action_secondSignFragment_to_firstSignFragment)
         }
+
+
         return binding.root
     }
 
