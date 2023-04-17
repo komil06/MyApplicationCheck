@@ -10,8 +10,6 @@ import com.example.myapplicationcheck.databinding.FragmentBookedBinding
 
 
 class BookedFragment : Fragment() {
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -20,6 +18,12 @@ class BookedFragment : Fragment() {
         binding.backbooked.setOnClickListener{
             findNavController().navigate(R.id.action_bookedFragment_to_firstHomeFragment)
         }
+        binding.apps.setOnClickListener {
+            findNavController().navigate(R.id.action_bookedFragment_to_bookmarkFragment)
+        }
+
+
+
 
         return binding.root
     }

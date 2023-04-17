@@ -130,6 +130,9 @@
         <action
             android:id="@+id/action_firstHomeFragment_to_firstProfileFragment"
             app:destination="@id/firstProfileFragment" />
+        <action
+            android:id="@+id/action_firstHomeFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
     </fragment>
     <fragment
         android:id="@+id/bookedFragment"
@@ -139,6 +142,9 @@
         <action
             android:id="@+id/action_bookedFragment_to_firstHomeFragment"
             app:destination="@id/firstHomeFragment" />
+        <action
+            android:id="@+id/action_bookedFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
     </fragment>
     <fragment
         android:id="@+id/notifFragment"
@@ -157,6 +163,18 @@
         <action
             android:id="@+id/action_firstProfileFragment_to_firstSignFragment"
             app:destination="@id/firstSignFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.example.myapplicationcheck.BookmarkFragment"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" >
+        <action
+            android:id="@+id/action_bookmarkFragment_to_firstHomeFragment"
+            app:destination="@id/firstHomeFragment" />
+        <action
+            android:id="@+id/action_bookmarkFragment_to_bookedFragment"
+            app:destination="@id/bookedFragment" />
     </fragment>
 
 </navigation>

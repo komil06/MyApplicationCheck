@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
@@ -11,9 +12,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.myapplicationcheck.adapters.BigItemAdapter
+import com.example.myapplicationcheck.adapters.ItemAdapter
 import com.example.myapplicationcheck.adapters.SmallItemAdapter
 import com.example.myapplicationcheck.databinding.FragmentFirstHomeBinding
 import com.example.myapplicationcheck.templates.BigItem
+import com.example.myapplicationcheck.templates.Item
 import com.example.myapplicationcheck.templates.SmallItem
 
 
@@ -21,24 +24,28 @@ class FirstHomeFragment : Fragment() {
    val list= mutableListOf<BigItem>()
    val list2= mutableListOf<SmallItem>()
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
 
-        val binding = FragmentFirstHomeBinding.inflate(inflater,container,false)
-        binding.booked.setOnClickListener{
-            findNavController().navigate(R.id.action_firstHomeFragment_to_bookedFragment)
 
-        }
+        val binding = FragmentFirstHomeBinding.inflate(inflater,container,false)
+
+
+
+
         binding.notif.setOnClickListener{
             findNavController().navigate(R.id.action_firstHomeFragment_to_notifFragment)
         }
-        binding.recentlybooked.setOnClickListener {
+        binding.seeall.setOnClickListener {
             findNavController().navigate(R.id.action_firstHomeFragment_to_bookedFragment)
         }
-
+        binding.booked.setOnClickListener {
+            findNavController().navigate(R.id.action_firstHomeFragment_to_bookmarkFragment)
+        }
 
 
         list.add(BigItem(R.drawable.itemback1,false,"Emeralda De Hotel","Paris, France","$29/per night"))
@@ -51,7 +58,6 @@ class FirstHomeFragment : Fragment() {
         val layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.rv1.adapter = adapter
         binding.rv1.layoutManager = layoutManager
-
 
         list2.add(SmallItem(R.drawable.itemback1,false,"Emeralda De Hotel","Paris, France","$29/per night"))
         list2.add(SmallItem(R.drawable.itemback2,false,"President Hotel","Paris, France",  "$35/per nigth"))
