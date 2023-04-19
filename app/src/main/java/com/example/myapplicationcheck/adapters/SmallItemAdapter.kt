@@ -9,9 +9,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplicationcheck.R
+import com.example.myapplicationcheck.templates.BigItem
 import com.example.myapplicationcheck.templates.SmallItem
 
-class SmallItemAdapter(var list2:MutableList<SmallItem>): RecyclerView.Adapter<SmallItemAdapter.SmallItemHolder>(){
+class SmallItemAdapter(var list2:MutableList<SmallItem>,var smallItemInterface: SmallItemInterface): RecyclerView.Adapter<SmallItemAdapter.SmallItemHolder>(){
 
     class SmallItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val name:TextView = itemView.findViewById(R.id.hotel_name)
@@ -38,7 +39,11 @@ class SmallItemAdapter(var list2:MutableList<SmallItem>): RecyclerView.Adapter<S
         holder.mark.tag = item2.mark
         holder.price.text = item2.price
 
+
+
     }
 
-
+    interface SmallItemInterface{
+        fun OnItemClick(smallItem: SmallItem)
+    }
 }

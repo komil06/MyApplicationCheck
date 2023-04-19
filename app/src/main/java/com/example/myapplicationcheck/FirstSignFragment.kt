@@ -19,12 +19,15 @@ class FirstSignFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentFirstSignBinding.inflate(inflater,container,false)
-        binding.loginButton.setOnClickListener {
-            findNavController().navigate(R.id.action_firstSignFragment_to_fourthSignFragment)
-        }
+
         binding.register.setOnClickListener {
             findNavController().navigate(R.id.action_firstSignFragment_to_secondSignFragment)
         }
+
+       binding.loginButton.setOnClickListener {
+           findNavController().navigate(R.id.action_firstSignFragment_to_fourthSignFragment)
+       }
+
         return binding.root
     }
 

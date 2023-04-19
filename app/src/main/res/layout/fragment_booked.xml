@@ -35,7 +35,7 @@
         android:id="@+id/apps"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/ic_apps"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,11 +44,22 @@
     <ImageView
         android:layout_width="23dp"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/baseline_book_online_24"
         app:layout_constraintEnd_toStartOf="@+id/apps"
-        app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintStart_toEndOf="@+id/textView13"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/smallrv"
+        android:layout_width="match_parent"
+        android:layout_height="673dp"
+        android:layout_marginTop="1dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

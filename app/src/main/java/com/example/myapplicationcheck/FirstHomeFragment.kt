@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
@@ -54,10 +55,18 @@ class FirstHomeFragment : Fragment() {
         list.add(BigItem(R.drawable.itemback4,false,"Palazzo Versace","Rome, Italy  ",  "$36/per nigth"))
         list.add(BigItem(R.drawable.itemback5,false,"Bulgary Resort","Istanbul, Turkiye",  "$27/per nigth"))
         list.add(BigItem(R.drawable.itemback6,false,"President Hotel","Paris, France",  "$35/per nigth"))
-        val adapter = BigItemAdapter(list)
+
+        val adapter = BigItemAdapter(list,object:BigItemAdapter.BigItemInterface{
+            override fun OnItemClick(bigItem: BigItem) {
+                var bundle = bundleOf("bigitem" to bigItem)
+                findNavController().navigate(R.id.action_firstHomeFragment_to_smallFragment, bundle)
+            }
+
+        })
         val layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.rv1.adapter = adapter
         binding.rv1.layoutManager = layoutManager
+
 
         list2.add(SmallItem(R.drawable.itemback1,false,"Emeralda De Hotel","Paris, France","$29/per night"))
         list2.add(SmallItem(R.drawable.itemback2,false,"President Hotel","Paris, France",  "$35/per nigth"))
@@ -65,7 +74,12 @@ class FirstHomeFragment : Fragment() {
         list2.add(SmallItem(R.drawable.itemback4,false,"Palazzo Versace","Rome, Italy  ",  "$36/per nigth"))
         list2.add(SmallItem(R.drawable.itemback5,false,"Bulgary Resort","Istanbul, Turkiye",  "$27/per nigth"))
         list2.add(SmallItem(R.drawable.itemback6,false,"President Hotel","Paris, France",  "$35/per nigth"))
-        val adapter2 = SmallItemAdapter(list2)
+        val adapter2 = SmallItemAdapter(list2,object :SmallItemAdapter.SmallItemInterface{
+            override fun OnItemClick(smallItem: SmallItem) {
+                var bundle = bundleOf("smallitem" to smallItem)
+                findNavController().navigate(R.id.action_firstHomeFragment_to_smallFragment,bundle)
+            }
+        })
         val layoutManager2 = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.rv2.adapter = adapter2
         binding.rv2.layoutManager = layoutManager2

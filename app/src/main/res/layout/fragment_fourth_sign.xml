@@ -59,6 +59,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints" />
@@ -72,7 +73,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="32dp"
         android:hint="Password"
-        app:layout_constraintEnd_toEndOf="@+id/textInputEditText"
+        app:layout_constraintEnd_toEndOf="@+id/password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
         app:passwordToggleEnabled="true"
@@ -81,7 +82,7 @@
 
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints"
@@ -96,7 +97,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="45dp"
         android:backgroundTint="#47B34B"
-        android:text="Sign up"
+        android:text="Sign in"
         android:textColor="@color/white"
         android:textAllCaps="false"
         app:cornerRadius="25dp"

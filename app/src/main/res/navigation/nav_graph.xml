@@ -62,59 +62,53 @@
         android:name="com.example.myapplicationcheck.FirstSignFragment"
         android:label="fragment_first_sign"
         tools:layout="@layout/fragment_first_sign" >
-        <action
-            android:id="@+id/action_firstSignFragment_to_secondSignFragment"
-            app:destination="@id/secondSignFragment" />
+
         <action
             android:id="@+id/action_firstSignFragment_to_fourthSignFragment"
             app:destination="@id/fourthSignFragment" />
+        <action
+            android:id="@+id/action_firstSignFragment_to_secondSignFragment"
+            app:destination="@id/secondSignFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/secondSignFragment"
         android:name="com.example.myapplicationcheck.SecondSignFragment"
         android:label="fragment_second_sign"
         tools:layout="@layout/fragment_second_sign" >
+
+
         <action
-            android:id="@+id/action_secondSignFragment_to_thirdSignFragment"
-            app:destination="@id/thirdSignFragment" />
-        <action
-            android:id="@+id/action_secondSignFragment_to_fourthSignFragment"
-            app:destination="@id/fourthSignFragment" />
+            android:id="@+id/action_secondSignFragment_to_firstHomeFragment"
+            app:destination="@id/firstHomeFragment" />
         <action
             android:id="@+id/action_secondSignFragment_to_firstSignFragment"
             app:destination="@id/firstSignFragment" />
 
 
     </fragment>
-    <fragment
-        android:id="@+id/thirdSignFragment"
-        android:name="com.example.myapplicationcheck.ThirdSignFragment"
-        android:label="fragment_third_sign"
-        tools:layout="@layout/fragment_third_sign" >
-        <action
-            android:id="@+id/action_thirdSignFragment_to_fourthSignFragment"
-            app:destination="@id/fourthSignFragment" />
-        <action
-            android:id="@+id/action_thirdSignFragment_to_secondSignFragment"
-            app:destination="@id/secondSignFragment" />
 
 
-    </fragment>
+
     <fragment
         android:id="@+id/fourthSignFragment"
         android:name="com.example.myapplicationcheck.FourthSignFragment"
         android:label="fragment_fourth_sign"
         tools:layout="@layout/fragment_fourth_sign" >
 
+
+
+
         <action
-            android:id="@+id/action_fourthSignFragment_to_firstSignFragment"
-            app:destination="@id/firstSignFragment" />
-        <action
-            android:id="@+id/action_fourthSignFragment_to_thirdSignFragment"
-            app:destination="@id/thirdSignFragment" />
+            android:id="@+id/action_fourthSignFragment_to_secondSignFragment"
+            app:destination="@id/secondSignFragment" />
         <action
             android:id="@+id/action_fourthSignFragment_to_firstHomeFragment"
             app:destination="@id/firstHomeFragment" />
+        <action
+            android:id="@+id/action_fourthSignFragment_to_firstSignFragment"
+            app:destination="@id/firstSignFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/firstHomeFragment"
@@ -127,12 +121,16 @@
         <action
             android:id="@+id/action_firstHomeFragment_to_notifFragment"
             app:destination="@id/notifFragment" />
-        <action
-            android:id="@+id/action_firstHomeFragment_to_firstProfileFragment"
-            app:destination="@id/firstProfileFragment" />
+
         <action
             android:id="@+id/action_firstHomeFragment_to_bookmarkFragment"
             app:destination="@id/bookmarkFragment" />
+        <action
+            android:id="@+id/action_firstHomeFragment_to_bigFragment"
+            app:destination="@id/bigFragment" />
+        <action
+            android:id="@+id/action_firstHomeFragment_to_smallFragment"
+            app:destination="@id/smallFragment" />
     </fragment>
     <fragment
         android:id="@+id/bookedFragment"
@@ -155,15 +153,7 @@
             android:id="@+id/action_notifFragment_to_firstHomeFragment"
             app:destination="@id/firstHomeFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/firstProfileFragment"
-        android:name="com.example.myapplicationcheck.FirstProfileFragment"
-        android:label="fragment_first_profile"
-        tools:layout="@layout/fragment_first_profile" >
-        <action
-            android:id="@+id/action_firstProfileFragment_to_firstSignFragment"
-            app:destination="@id/firstSignFragment" />
-    </fragment>
+
     <fragment
         android:id="@+id/bookmarkFragment"
         android:name="com.example.myapplicationcheck.BookmarkFragment"
@@ -175,6 +165,17 @@
         <action
             android:id="@+id/action_bookmarkFragment_to_bookedFragment"
             app:destination="@id/bookedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bigFragment"
+        android:name="com.example.myapplicationcheck.BigFragment"
+        android:label="BigFragment" />
+    <fragment
+        android:id="@+id/smallFragment"
+        android:name="com.example.myapplicationcheck.SmallFragment"
+        android:label="fragment_small"
+        tools:layout="@layout/fragment_small" >
+
     </fragment>
 
 </navigation>

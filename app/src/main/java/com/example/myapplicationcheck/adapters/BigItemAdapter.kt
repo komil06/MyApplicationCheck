@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplicationcheck.R
 import com.example.myapplicationcheck.templates.BigItem
 
-class BigItemAdapter(var list:MutableList<BigItem>) : RecyclerView.Adapter<BigItemAdapter.BigItemHolder>() {
+class BigItemAdapter(var list:MutableList<BigItem>, var bigItemInterface:BigItemInterface) : RecyclerView.Adapter<BigItemAdapter.BigItemHolder>() {
 
     class BigItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var name:TextView = itemView.findViewById(R.id.itemtext)
@@ -17,10 +17,11 @@ class BigItemAdapter(var list:MutableList<BigItem>) : RecyclerView.Adapter<BigIt
         var price:TextView = itemView.findViewById(R.id.price)
         var mark :ImageView = itemView.findViewById(R.id.mark)
         var background:ImageView = itemView.findViewById(R.id.background)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BigItemHolder {
-        var holder  = BigItemHolder(LayoutInflater.from(parent.context).inflate(R.layout.item,parent,false))
+        var holder  = BigItemHolder(LayoutInflater.from(parent.context).inflate(R.layout.fragment_big,parent,false))
         return holder
     }
 
@@ -35,6 +36,13 @@ class BigItemAdapter(var list:MutableList<BigItem>) : RecyclerView.Adapter<BigIt
         holder.location.text = item.location
         holder.mark.tag = item.mark
         holder.price.text = item.price
+        holder.itemView.setOnClickListener{
+            bigItemInterface.OnItemClick(item)
+        }
+
+    }
+    interface BigItemInterface{
+        fun OnItemClick(bigItem: BigItem)
 
 
     }
