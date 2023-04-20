@@ -47,7 +47,6 @@ class BookedFragment : Fragment() {
 
 
 
-
         return binding.root
     }
 

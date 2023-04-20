@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.widget.PopupMenu
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,7 +26,10 @@ class FirstHomeFragment : Fragment() {
    val list= mutableListOf<BigItem>()
    val list2= mutableListOf<SmallItem>()
 
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,6 +38,16 @@ class FirstHomeFragment : Fragment() {
 
 
         val binding = FragmentFirstHomeBinding.inflate(inflater,container,false)
+
+//            val popupMenu = PopupMenu(requireContext(), binding.booked)
+//
+//            popupMenu.menuInflater.inflate(R.menu.bottom_menu, popupMenu.menu)
+//            popupMenu.setOnMenuItemClickListener { menuItem ->
+//                Toast.makeText(requireContext(), "You Clicked " + menuItem.title, Toast.LENGTH_SHORT).show()
+//                true
+//            }
+//            popupMenu.show()
+//            true
 
 
 
@@ -84,10 +98,36 @@ class FirstHomeFragment : Fragment() {
         binding.rv2.adapter = adapter2
         binding.rv2.layoutManager = layoutManager2
 
+
+
+        binding.bottomNavigationView.setOnItemSelectedListener{
+            when (it.itemId) {
+                R.id.home -> {
+
+
+                }
+                R.id.booking -> {
+                    findNavController().navigate(R.id.action_firstHomeFragment_to_bookedFragment)
+
+                }
+                R.id.profile ->{
+                    findNavController().navigate(R.id.action_firstHomeFragment_to_profileFragment)
+                }
+            }
+            true
+        }
+
+
         return binding.root
 
 
     }
+
+//    fun loadFragment(fragment: Fragment){
+//        val transaction = parentFragmentManager.beginTransaction()
+//        transaction.replace(R.id.container,fragment)
+//        transaction.commit()
+//    }
 
 
 }
